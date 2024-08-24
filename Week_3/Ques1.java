@@ -9,13 +9,12 @@ public class Ques1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Binary Number : ");
         num = scanner.nextInt();
-        int num1 = num;
         scanner.close();
         while(num != 0){
             rem = num % 10;
             num = num / 10;
             if(rem > 1){
-                System.out.println("Not a Biary Number!");
+                System.out.println("Not a Binary Number!");
                 break;
             }
             sum = (int) (sum + rem * Math.pow(2, i));
