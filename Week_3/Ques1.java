@@ -18,8 +18,9 @@ public class Ques1 {
                 System.out.println("Not a Biary Number!");
                 break;
             }
-            sum = sum + rem * pow(2, i);
+            sum = (int) (sum + rem * Math.pow(2, i));
+            i++;
         }
-        System.out.println("Done");
+        System.out.println("Decimal Number is : "+sum);
     }
 }
