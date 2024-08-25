@@ -19,10 +19,21 @@ public class Ques1 {
             sum = sum + a[i];
         }
         System.out.println("Sum of Array = "+sum);
-        int temp;
+        int avg;
+        avg = sum / (a.length - 1);
+        System.out.println("Average of Array = "+avg);
+        int max, min;
+        max = a[0];
+        min = a[0];
         for(int i = 0; i < a.length; i++){
-            temp = a[i];
-            
+            if(a[i] > max){
+                max = a[i];
+            }
+            if(a[i] < min){
+                min = a[i];
+            }
         }
+        System.out.println("Maximum Value = "+max);
+        System.out.println("Minimum Value ="+min);
     }
 }
