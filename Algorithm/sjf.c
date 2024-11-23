@@ -65,6 +65,7 @@ void takeInput(struct Process proc[], int n){
         printf("Enter Burst Time for Process %d : ", proc[i].PID);
         scanf("%d", &proc[i].burstTime);
         proc[i].isCompleted = 0;
+        printf("Process %d completed\n",i);
     }
 }
 
