@@ -20,9 +20,10 @@ void calculateTime(struct Process proc[], int n){
 
     // To be put in takeInput() function
 
-    for(int i = 0; i < n; i++){
+    /*for(int i = 0; i < n; i++){
         proc[i].remainingTime = proc[i].burstTime;
-    }
+    }*/
+
     // Till here
 
     printf("\nExecution Log\n");
@@ -92,6 +93,8 @@ void takeInput(struct Process proc[], int n){
         scanf("%d", &proc[i].arrivalTime);
         printf("Enter the burst Time for Process %d : ", proc[i].PID);
         scanf("%d", &proc[i].burstTime);
+
+        proc[i].remainingTime = proc[i].burstTime;
     }
 }
 
