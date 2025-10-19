@@ -22,5 +22,6 @@ public class Ques2 {
             }
         }
         System.out.println("Least Burst if process P"+index+": "+least_burst_time);
+        scanner.close();
     }
 }
