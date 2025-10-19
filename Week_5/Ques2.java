@@ -1,39 +1,46 @@
 package Week_5;
 
-import java.util.Scanner;
 public class Ques2 {
+    public static void displayGanttChart(Ques1.Process[] processes){
+        for(Ques1.Process p : processes){
+            System.out.print(" ");
+            for(int i = 0; i < (int)p.burst_time; i++){
+                System.out.print("--");
+            }
+        }
+        System.out.println();
+        for(Ques1.Process p : processes){
+            System.out.print(" | ");
+            System.out.print(p.pid);
+            int spaces = (int)p.burst_time - 1;
+            for(int i = 0; i < spaces; i++){
+                System.out.print(" ");
+            }
+        }
+        System.out.println(" | ");
+        for(Ques1.Process p : processes){
+            System.out.print(" ");
+            for(int i = 0; i < (int)p.burst_time; i++){
+                System.out.print("--");
+            }
+        }
+        System.out.println();
+        double current_time = 0;
+        System.out.print("0");
+        for(Ques1.Process p : processes){
+            if(current_time < p.arrival_time){
+                current_time = p.arrival_time;
+            }
+            current_time += p.burst_time;
+            System.out.print("   "+(int)current_time);
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int row, col;
-        System.out.println("Enter the number of Rows : ");
-        row = scanner.nextInt();
-        System.out.println("Enter the number of colunm : ");
-        col = scanner.nextInt();
-        int[][] matrix = new int[row][col];
-        int[][] tranposeMatrix = new int[col][row];
-        System.out.print("Enter the Elements of Array : ");
-        for(int i = 0; i < row; i++){
-            for(int j = 0; j < col; j++){
-                matrix[i][j] = scanner.nextInt();
-            }
-        }
-        System.out.println("Original Array : ");
-        for(int i = 0; i < row; i++){
-            for(int j = 0; j < col; j++){
-                System.out.print(" "+matrix[i][j]);
-            }System.out.println();
-        }
-        for(int i = 0; i < col; i++){
-            for(int j = 0; j < row; j++){
-                tranposeMatrix[i][j] = matrix[j][i];
-            }
-        }
-        System.out.println("Transpose of array : ");
-        for(int i = 0; i < col; i++){
-            for(int j = 0; j < row; j++){
-                System.out.print(" "+tranposeMatrix[i][j]);
-            }System.out.println();
-        }
-        scanner.close();
+        Ques1.Process p1 = new Ques1.Process("P1", 0, 4);
+        Ques1.Process p2 = new Ques1.Process("P2", 1, 3);
+        Ques1.Process p3 = new Ques1.Process("P3", 2, 5);
+        Ques1.Process[] processes = {p1, p2, p3};
+        displayGanttChart(processes);
     }
 }
