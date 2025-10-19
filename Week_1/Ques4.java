@@ -5,38 +5,15 @@ import java.util.Scanner;
 public class Ques4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double a,b;
-        int op;
-        boolean cond = true;
-        while (cond) {
-            System.out.print("Enter First numer : ");
-            a = scanner.nextInt();
-            System.out.print("Enter second numer : ");
-            b = scanner.nextInt();
-            System.out.println("1. for add\n2. Subtract\n3. Multiply\n4. Divide");
-            System.out.println("5. Exit");
-            System.out.print("Enter your Opeartion() : ");
-            op = scanner.nextInt();
-            if (op == 5) {
-                cond = false;
-            }
-            else if (op == 1) {
-                System.out.println("Sum = "+(a+b));
-            }
-            else if (op == 2) {
-                System.out.println("Subtraction = "+(a-b));
-            }
-            else if (op == 3) {
-                System.out.println("Multiplication = "+(a*b));
-            }
-            else if (op == 4) {
-                System.out.println("Division = "+(a/b));
-            }
-            else 
-            {
-                System.out.println("Please Enter Correct Number!!");
-            }
-        }
+        int total_printers, total_users;
+        System.out.print("Enter total Number of Printers: ");
+        total_printers = scanner.nextInt();
+        System.out.print("Enter total Number of users: ");
+        total_users = scanner.nextInt();
         scanner.close();
+        int distribution = total_printers / total_users;
+        int remaining = total_printers % total_users;
+        System.out.println("Each users Get "+distribution+" of printers");
+        System.out.println("Remaing Printers: "+remaining);
     }
 }

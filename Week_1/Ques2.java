@@ -5,17 +5,14 @@ import java.util.Scanner;
 public class Ques2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int num;
-        System.out.print("Enter a Number : ");
-        num = scanner.nextInt();
+        int PID;
+        System.out.print("Enter a process ID (PID): ");
+        PID = scanner.nextInt();
         scanner.close();
-        int rem;
-        rem = num%2;
-        if(rem == 0){
-            System.out.println("Number "+num+" is Even Number");
-        }
-        else{
-            System.out.println("Number "+num+" is Odd Number");
+        if(PID % 2 == 0){
+            System.out.println("System Process");
+        }else{
+            System.out.println("User Process");
         }
     }
 }

@@ -1,25 +1,25 @@
 package Week_4;
 
-import java.util.Scanner;
+import java.util.List;
 
 public class Ques4 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int length;
-        System.out.println("Enter the length of Matrix : ");
-        length = scanner.nextInt();
-        int[] array = new int[length];
-        System.out.println("Enter the elements of Array : ");
-        for(int i = 0; i < length; i++){
-            array[i] = scanner.nextInt();
+    public static Ques1.Process selectShortestJob(List<Ques1.Process> readyQueue){
+        if(readyQueue == null || readyQueue.isEmpty()){
+            return null;
         }
-        int max = array[0];
-        for(int i = 0; i < array.length; i++){
-            if(array[i] > max){
-                max = array[i];
+        Ques1.Process shortest = readyQueue.get(0);
+        for(Ques1.Process p : readyQueue){
+            if(p.burst_time < shortest.burst_time){
+                shortest = p;
             }
         }
-        System.out.println("Max elemnts = "+max);
-        scanner.close();
+        return shortest;
+    }
+    public static void displaySelectedProcess(Ques1.Process process){
+        if(process != null){
+            System.out.println("Next Selected Process (SJN): "+process.pid+" with burst time: "+process.burst_time);
+        }else{
+            System.out.println("No process available in Ready Queue");
+        }
     }
 }

@@ -1,41 +1,28 @@
 package Week_4;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ques5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number of elements in the array:");
+        System.out.print("Enter number of processes: ");
         int n = scanner.nextInt();
-        int[] array = new int[n];
-        System.out.println("Enter the elements of the array:");
-        for (int i = 0; i < n; i++) {
-            array[i] = scanner.nextInt();
+        scanner.nextLine();
+        Ques1.Process[] processes = Ques2.inputProcess(n);
+        System.out.println("Display Process: ");
+        Ques2.displayProcess(processes);
+        double[] completion_time = Ques3.completionTime(processes);
+        System.out.println("Display Completio Time: ");
+        Ques3.displayCompletionTime(processes, completion_time);
+        List<Ques1.Process> readyQueue = new ArrayList<>();
+        for(Ques1.Process p : processes){
+            readyQueue.add(p);
         }
-        bubbleSort(array);
-        System.out.println("Sorted array:");
-        for (int num : array) {
-            System.out.print(num + " ");
-        }
+        System.out.println("Select next process (SJN): ");
+        Ques1.Process nextProcess = Ques4.selectShortestJob(readyQueue);
+        Ques4.displaySelectedProcess(nextProcess);
         scanner.close();
-    }
-    public static void bubbleSort(int[] array) {
-        int n = array.length;
-        boolean swapped;
-        for (int i = 0; i < n - 1; i++) {
-            swapped = false;
-            for (int j = 0; j < n - 1 - i; j++) {
-                if (array[j] > array[j + 1]) {
-                    // Swap array[j] and array[j + 1]
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                    swapped = true;
-                }
-            }
-            if (!swapped) {
-                break;
-            }
-        }
     }
 }

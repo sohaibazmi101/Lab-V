@@ -1,17 +1,18 @@
 package Week_2;
 
+import java.util.Scanner;
+
 public class Ques1 {
     public static void main(String[] args) {
-        int a = 0;
-        int b = 1;
-        int c;
-        System.out.print("Series : "+a+" "+b);
-        for(int i = 2; i<10;i++){
-            c = a+b;
-            System.out.print(" "+c);
-            a=b;
-            b=c;
-        }
-        System.out.println();
+        Scanner scanner = new Scanner(System.in);
+        double busy_time, idle_time, cpu_utilization;
+        System.out.print("Enter Busy Time of CPU: ");
+        busy_time = scanner.nextDouble();
+        System.out.print("Enter Idle Time of CPU: ");
+        idle_time = scanner.nextDouble();
+        scanner.close();
+        double total_time = busy_time + idle_time;
+        cpu_utilization = busy_time / total_time * 100;
+        System.out.printf("CPU utilization: %.2f%%\n", cpu_utilization);
     }
 }

@@ -5,6 +5,104 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Ques5",
+            "request": "launch",
+            "mainClass": "Week_4.Ques5",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques2",
+            "request": "launch",
+            "mainClass": "Week_4.Ques2",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques4",
+            "request": "launch",
+            "mainClass": "Week_3.Ques4",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques3",
+            "request": "launch",
+            "mainClass": "Week_3.Ques3",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques2",
+            "request": "launch",
+            "mainClass": "Week_3.Ques2",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques1",
+            "request": "launch",
+            "mainClass": "Week_3.Ques1",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques4",
+            "request": "launch",
+            "mainClass": "Week_2.Ques4",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques3",
+            "request": "launch",
+            "mainClass": "Week_2.Ques3",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques2",
+            "request": "launch",
+            "mainClass": "Week_2.Ques2",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques1",
+            "request": "launch",
+            "mainClass": "Week_2.Ques1",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques4",
+            "request": "launch",
+            "mainClass": "Week_1.Ques4",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques3",
+            "request": "launch",
+            "mainClass": "Week_1.Ques3",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques2",
+            "request": "launch",
+            "mainClass": "Week_1.Ques2",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
+            "type": "java",
+            "name": "Ques1",
+            "request": "launch",
+            "mainClass": "Week_1.Ques1",
+            "projectName": "Lab-V_78a25f54"
+        },
+        {
             "name": "(gdb) Pipe Launch",
             "type": "cppdbg",
             "request": "launch",
@@ -77,8 +175,5 @@
                 }
             ]
         }
-        
-
-
     ]
 }
